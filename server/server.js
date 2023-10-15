@@ -1,8 +1,9 @@
-const PORT = process.env.PORT || 8000;
+const env = require('dotenv').config();
+
 const express = require('express');
 const  pool = require('./db');
 const app =  express();
-
+const PORT = process.env.PORT || 8000;
 app.get('/todos',async (req,res)=>{
     try{
         const todos = await pool.query("SELECT * FROM todos");
