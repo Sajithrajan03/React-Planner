@@ -4,7 +4,7 @@ const env = require('dotenv').config();
 const pool = new Pool({
     user: env.USERNAME,
     password: process.env.PASSWORD,
-    host: process.env.HOST,
+    host: process.env.dHOST,
     port: process.env.DBPORT,
     database: 'todoapp'
 })
